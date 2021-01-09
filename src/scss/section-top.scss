@@ -1,0 +1,172 @@
+.section-top {
+    display: flex;
+    padding-top: 40px;
+
+    @media only screen and (max-width:670px) {
+        display: block;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 150px;
+    }
+    
+    > div {
+        
+        &.section-top_left {
+            background-color: rgba(25,25,25,.8);
+            flex-basis: 230px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+
+            @media only screen and (max-width:670px) {
+                background-color: transparent;
+                display: block;
+            }
+
+            h4 {
+                padding-top: 20px;
+                padding-bottom: 10px;
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .section-top_left_top {
+                flex: 1;
+                padding-top: 15px;
+
+                @media only screen and (max-width:670px) {
+                    padding: 0;
+                    float: left;
+                }
+
+                h1,
+                h1:after {
+                    font-size: 130px;
+                    line-height: 1;
+                }
+
+                @media only screen and (max-width:768px) {
+                    padding-top: 25px;
+
+                    h1,
+                    h1:after {
+                        font-size: 110px;
+                        padding-right: 15px;
+                    }
+                }
+
+                @media only screen and (max-width:670px) {
+                    padding: 0;
+
+                    h1,
+                    h1:after {
+                        font-size: 73px;
+                        padding-right: 15px;
+                    }
+                }
+
+                h1 {
+                    display: inline-block;
+                    width: auto;
+                    position: relative;
+                    color: $white;
+                }
+
+                h1:after {
+                    position: absolute;
+                    z-index: 1;
+                    left: -3px;
+                    display: inline-block;
+                    content: attr(data-value);
+                    color: $green;
+                }
+
+            }
+
+            .section-top_left_bottom {
+                padding: 10px;
+
+                @media only screen and (max-width:768px) {
+                    padding: 27px 25px;
+                }
+
+                @media only screen and (max-width:670px) {
+                    padding: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+
+        &.section-top_right {
+            flex: 1;
+
+            .section-top_right_content {
+                padding: 15px 28px 0 28px;
+
+                h1 {
+                    font-size: 48px;
+                    line-height: 1.3;
+                    color: $green;
+                    padding-bottom: 30px;
+
+                    @media only screen and (min-width:671px) {
+                        > br:last-child {
+                            display: none
+                        }
+                    }
+                }
+
+                h2 {
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 1.3;
+                    color: $grey2;
+                    padding-bottom: 30px;
+                }
+
+                @media only screen and (max-width:992px) {
+                    padding: 25px 40px 0 40px;
+
+                    h1 {
+                        font-size: 36px;
+                        padding-bottom: 20px;
+                    }
+
+                    h2 {
+                        font-size: 24px;
+                        padding-bottom: 15px;
+                    }
+                }
+
+                @media only screen and (max-width:768px) {
+                    padding: 30px 0 30px 35px;
+
+                    h1 {
+                        font-size: 26px;
+                    }
+
+                    h2 {
+                        font-size: 18px;
+                    }
+                }
+
+                @media only screen and (max-width:670px) {
+                    padding: 0;
+
+                    h1 {
+                        font-size: 18px;
+                    }
+
+                    h2 {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+    }
+}

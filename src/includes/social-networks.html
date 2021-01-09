@@ -1,0 +1,8 @@
+<div class="social-networks">
+    <% socials.forEach(function(item) { %>
+        <a target="_blank" rel="noopener noreferrer" href="<%-item.url%>">
+            <i style="background-image: url('./images/socials/sprite.svg#<%-item.img%>')" alt="<%-item.name%>"></i>
+            <i style="background-image: url('./images/socials/sprite.svg#<%-item.img%>_hover')" alt="<%-item.name%>"></i>
+        </a>
+    <% }); %>
+</div>

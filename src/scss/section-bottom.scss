@@ -1,0 +1,41 @@
+.section-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media only screen and (max-width:460px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: $grey2;
+        padding-bottom: 30px;
+    }
+
+    @media only screen and (max-width:992px) {
+        > div {
+            padding: 0 40px;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+
+        h2 {
+            font-size: 18px;
+        }
+
+        > div {
+            padding: 0;
+        }
+    }
+
+    @media only screen and (max-width:460px) {
+        h2 {
+            padding-bottom: 10px;
+        }
+    }
+
+}

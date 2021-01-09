@@ -1,0 +1,75 @@
+.social-networks {
+    margin: 0 auto;
+    max-width: 210px;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width:768px) {
+        max-width: 180px;
+    }
+
+    @media only screen and (max-width:670px) {
+        max-width: 140px;
+    }
+
+    > a {
+        flex-basis: 35px;
+        height: 35px;
+        background-color: $grey;
+        line-height: 33px;
+        border-radius: 3px;
+        cursor: pointer;
+        text-align: center;
+
+        @media only screen and (max-width:768px) {
+            flex-basis: 30px;
+            height: 30px;
+            line-height: 29px;
+        }
+
+        @media only screen and (max-width:670px) {
+            flex-basis: 23px;
+            height: 23px;
+            line-height: 22px;
+        }
+
+        > i {
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            @media only screen and (max-width:768px) {
+                width: 17px;
+                height: 17px;
+            }
+
+            @media only screen and (max-width:670px) {
+                width: 13px;
+                height: 13px;
+            }
+
+            &:last-child {
+                display: none;
+            }
+        }
+
+        &:hover {
+            background-color: $green;
+
+            i {
+                &:first-child {
+                    display: none;
+                }
+            
+                &:last-child {
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+
+}

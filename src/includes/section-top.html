@@ -1,0 +1,21 @@
+<div class="section-top">
+    <div class="section-top_left">
+        <div class="section-top_left_top">
+            <h1 data-value='<%=contentTop.value%>'><%=contentTop.value%></h1>
+        </div>
+        <div class="section-top_left_bottom">
+            <a target="_blank" rel="noopener noreferrer" class="button-style" href="#">Текстовая версия</a>
+            <h4>Поделиться</h4>
+            <%=socials%>
+        </div>
+    </div>
+    <div class="section-top_right">
+        <div class="section-top_right_content">
+            <h1><%=contentTop.h1%></h1>
+            <h2><%=contentTop.h2%></h2>
+            <% contentTop.p.forEach(function(item) { %>
+                <p><%-item%></p>
+            <% }); %>
+        </div>
+    </div>
+</div>

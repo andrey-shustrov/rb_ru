@@ -1,0 +1,182 @@
+@import "reset";
+
+$white: #FFF;
+$green: #00FF57;
+$grey: #505050;
+$grey2: #bdbdbd;
+$grey3: #171717;
+$grey4: #191919;
+$black: #000;
+
+@mixin font($font_name, $file_name, $wight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2');
+        font-weight: #{$wight};
+        font-style: #{$style};
+    }
+}
+
+@import "fonts";
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background: $black;
+}
+
+body {
+    color: $white;
+    font-family: "MuseoSansCyrl";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $grey2;
+}
+
+@media only screen and (max-width:768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:460px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+h1,
+h2,
+b {
+    font-weight: 900;
+}
+
+p ~ p {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width:768px) {
+    p ~ p {
+        padding-top: 15px;
+    }
+}
+
+a {
+    color: $grey2;
+    text-decoration: none;
+
+    &:hover {
+        color: $grey2;
+        text-decoration: underline;
+    }
+}
+
+.main {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1440px;
+    min-height: 100vh;
+    
+    background: url('../images/bg_top.jpg') right 40px no-repeat,
+       #04060e url('../images/bg_bottom.jpg') right bottom no-repeat;
+
+
+    > header,
+    > section,
+    > footer {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1180px;
+    }
+
+    > section {
+        flex: 1;
+        padding: 0 25px;
+
+        @media only screen and (max-width:670px) {
+            padding: 0 20px;
+        }
+    }
+
+    > footer {
+        .footer {
+            .footer_socials {
+                margin: 0 25px;
+                background: rgba(25,25,25,.8);
+                height: 100px;
+                text-align: center;
+
+                @media only screen and (max-width:460px) {
+                    height: auto;
+                    margin: 0;
+                    background: transparent;
+                }
+
+                h4 {
+                    padding-top: 13px;
+                    padding-bottom: 13px;
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+            .footer_copirait {
+                padding-top: 20px;
+                padding-bottom: 30px;
+                color: $grey;
+                text-align: center;
+
+                @media only screen and (max-width:460px) {
+                    padding-top: 30px;
+                }
+
+                a {
+                    color: $grey;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $grey;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+a.button-style {
+    display: inline-block;
+    line-height: 40px;
+    width: 100%;
+    max-width: 209px;
+    height: 40px;
+    background-color: $green;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $grey3;
+    text-align: center;
+
+    @media only screen and (max-width:670px) {
+        font-size: 14px;
+        width: 169px;
+    }
+
+    &:hover {
+        background-color:$grey;
+        color: $white;
+    }
+}
+
+@import "header";
+@import "section-top";
+@import "social-networks";
+@import "section-people";
+@import "section-bottom";

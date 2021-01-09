@@ -1,0 +1,38 @@
+<div class="section-people">
+    <div class="section-people_list">
+        <!-- Карточки -->
+        <% people.forEach(function(item, i) { %>
+            <div class="section-people_card" 
+                data-id="<%-item.id%>" 
+                data-name="<%-item.name%>" 
+                data-company="<%-item.company%>"
+                data-money="<%-item.money%>">
+                <div>
+                    <i class="section-people_card_id"><%-item.id%></i>
+                    <i class="section-people_img section-people_img_<%-item.img%>" style="background-image: url('./images/people/<%-item.img%>.svg')" alt="<%-item.name%>"></i>
+                </div>
+                <div>
+                    <p><%-item.name%><span><%-item.company%></span></p>
+                    <p class="money"><i></i><%-item.money%></p>
+                </div>
+            </div>
+        <% }); %>
+        <!-- Большой блок -->
+        <div class="section-people_card_big">
+            <div class="section-people_card_big_socials">
+                <div><%=socials%></div>
+                <h4>Поделиться героем</h4>
+            </div>
+            <div class="section-people_card_big_number">1</div>
+            <div class="section-people_card_big_box">
+                <h1>Константин Константинов</h1>
+                <h2>Мясокомбинат Черкизово</h2>
+                <h2><i></i><span>15 000 000 000</span></h2>
+                <p>В апреле 2018 года стартап Anisoprint отметил трехлетний юбилей — его идею основатели компании, Федор Антонов и Андрей Азаров, придумали в 2014 году, когда вместе работали в «Сколтехе». Они хотели решить проблему, которая мешает широкому внедрению 3D-печати в промышленности: сейчас 3D-принтеры печатают в основном из пластика, а он слишком хрупкий. Печать же из металла пока стоит слишком дорого. Основатели Anisoprint решили создать 3D-принтер, который будет печатать детали из пластика, но с армированием углеродной нитью.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-people_box_bottom">
+        <a target="_blank" rel="noopener noreferrer" class="button-style" href="#">Текстовая версия</a>
+    </div>
+</div>

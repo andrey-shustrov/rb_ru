@@ -1,0 +1,124 @@
+.header {
+    height: 40px;
+    background-color: $black;
+    position: relative;
+
+    .header_top {
+        height: 40px;
+        display: table;
+        width: 100%;
+
+        & > div {
+            display: table-cell;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        & > div:last-child {
+            text-align: right;
+        }
+    }
+
+    .header_top_logo {
+        display: inline-block;
+        vertical-align: middle;
+        width: 107px;
+        height: 30px;
+        margin-left: 25px;
+        margin-top: 2px;
+        background-image: url('../images/logo.svg');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+
+        @media only screen and (max-width:670px) {
+            height: 21px;
+            margin-left: 20px;
+        }
+    }
+
+    .header_top_menu {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 3px;
+        margin-right: 16px;
+        width: 15px;
+        height: 15px;
+        background: url('../images/menu.svg') no-repeat;
+        background-size: 100% auto;
+        cursor: pointer;
+    }
+
+    .header_menu {
+        position: absolute;
+        top: 39px;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        z-index: 100;
+        overflow: hidden;
+        max-height: 800px;
+
+        transition: max-height .3s;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 20px 20px 0 20px;
+
+            li {
+                margin: 0;
+                padding: 0 0 18px 0;
+                font-size: 18px;
+                font-weight: 500;
+                color: $black;
+
+                a {
+                    color: $black;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    &.header_top_menu_open {
+        background-color: $white;
+
+        .header_top_logo {
+            background-image: url('../images/logo_black.svg');
+        }
+
+        .header_top_menu {
+            width: 14px;
+            height: 14px;
+            background: url('../images/close.svg') no-repeat;
+        }
+
+    }
+
+    &:not(.header_top_menu_open) {
+        .header_menu {
+            max-height: 0;
+        }
+    }
+
+    @media only screen and (min-width:671px) {
+        &.header_top_menu_open {
+            background-color: $black;
+
+            .header_top_logo {
+                background-image: url('../images/logo.svg');
+            }
+        }
+
+        .header_top_menu,
+        .header_menu {
+            display: none;
+        }
+    }
+
+}
