@@ -147,8 +147,8 @@
         }
 
         > .section-people_card {
-            flex-basis: calc(100% / 4 - 10px);
-            width: calc(100% / 4 - 10px);
+            flex-basis: calc(100% / 5 - 10px);
+            width: calc(100% / 5 - 10px);
             height: 190px;
             margin: 5px;
             display: flex;
@@ -158,16 +158,24 @@
             position: relative;
             cursor: pointer;
 
+            @media only screen and (max-width:992px) {
+                flex-basis: calc(100% / 4 - 10px);
+                width: calc(100% / 4 - 10px);
+            }
+
             @media only screen and (max-width:768px) {
                 flex-basis: calc(100% / 3 - 10px);
+                width: calc(100% / 3 - 10px);
             }
 
             @media only screen and (max-width:670px) {
                 flex-basis: calc(100% / 2 - 10px);
+                width: calc(100% / 3 - 10px);
             }
 
             @media only screen and (max-width:460px) {
                 flex-basis: calc(100% / 1 - 10px);
+                width: calc(100% / 1 - 10px);
             }
 
             > div:first-child {
